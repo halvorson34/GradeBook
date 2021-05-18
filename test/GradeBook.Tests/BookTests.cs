@@ -23,5 +23,25 @@ namespace GradeBook.Tests
             Assert.Equal(77.3, result.Low, 1);
 
         }
+
+        [Fact]
+        public void BookAddsGradeLess100Greater0()
+        {
+            var book = new Book("");
+            book.AddGrade(89.1);
+            book.AddGrade(-5.0);
+
+            if (grade <= 100 && grade >= 0)
+            {
+                grades.Add(grade);
+                Console.WriteLine("Grade Added");
+            }
+            else
+            {
+                Console.WriteLine("Invalid value");
+            }
+
+
+        }
     }
 }
